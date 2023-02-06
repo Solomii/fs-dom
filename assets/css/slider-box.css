@@ -3,8 +3,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 500px;
-  position: relative;
+  max-height: 50vmin;
 }
 
 .slider-container button {

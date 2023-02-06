@@ -43,9 +43,25 @@ const db = [
   "https://www.dogstrust.org.uk/images/1440x1080/assets/2022-07/188854sponsordogeric.jpg"
 ];
 
+const slider = new Slider(db);
+
+
 const image = document.querySelector(".slide>img");
-image.src = db[0]
+function updateView(){
+  // image.src = db[slider.currentIndex]
+  image.src = slider.currentSlide;
+}
+
 
 const [prevBtn, nextBtn] = document.querySelectorAll(
   ".slider-container button"
 );
+
+prevBtn.addEventListener("click", ()=>{
+  slider.currentIndex = slider.prev();
+  updateView()
+})
+nextBtn.addEventListener('click',()=>{
+  slider.currentIndex = slider.next();
+  updateView()
+})
