@@ -95,10 +95,10 @@ nextBtn.addEventListener("click", handlerBtnSlider("next"));
 
 const uniq = document.getElementById("uniq");
 
-uniq.addEventListener("click", handlerBtnUniq);
+// uniq.addEventListener("click", handlerBtnUniq);
 // uniq.addEventListener("click", logValue);
 // uniq.addEventListener("click", showBtn);
-
+uniq.addEventListener("myEvent123", handlerBtnUniq);
 uniq.dispatchEvent(new Event ("myEvent123"))
 
 function handlerBtnUniq() {
